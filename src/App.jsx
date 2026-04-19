@@ -390,14 +390,16 @@ function App() {
 
   useEffect(() => {
     function handleResize() {
-      if (window.innerWidth >= 960) {
-        setIsMenuOpen(false)
-      }
+      setIsMenuOpen(false)
     }
 
     window.addEventListener('resize', handleResize)
+    window.addEventListener('orientationchange', handleResize)
 
-    return () => window.removeEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('resize', handleResize)
+      window.removeEventListener('orientationchange', handleResize)
+    }
   }, [])
 
   useEffect(() => {
