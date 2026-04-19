@@ -527,9 +527,12 @@ function App() {
             aria-expanded={isMenuOpen}
             aria-label={content.menu}
           >
-            <span></span>
-            <span></span>
-            <span></span>
+            <span className="menu-button-icon" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+            <span className="menu-button-label">{content.menu}</span>
           </button>
         </div>
       </header>
