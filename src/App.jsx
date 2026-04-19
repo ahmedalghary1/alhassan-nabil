@@ -399,6 +399,19 @@ function App() {
   }, [])
 
   useEffect(() => {
+    if (!isMenuOpen) {
+      document.body.style.overflow = ''
+      return
+    }
+
+    document.body.style.overflow = 'hidden'
+
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [isMenuOpen])
+
+  useEffect(() => {
     const intervalId = window.setInterval(() => {
       startTransition(() => {
         setActiveTestimonial((current) => (current + 1) % testimonials.length)
@@ -456,6 +469,10 @@ function App() {
     setFormStatus(content.form.success)
   }
 
+  function closeMobileMenu() {
+    setIsMenuOpen(false)
+  }
+
   return (
     <main className="page-shell" dir={content.dir}>
       <div className="ambient ambient-one" aria-hidden="true"></div>
@@ -507,14 +524,44 @@ function App() {
         </div>
       </header>
 
+      <button
+        className={isMenuOpen ? 'floating-menu-button open' : 'floating-menu-button'}
+        onClick={() => setIsMenuOpen((current) => !current)}
+        type="button"
+        aria-expanded={isMenuOpen}
+        aria-label={content.menu}
+      >
+        <span className="floating-menu-icon" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        <span>{content.menu}</span>
+      </button>
+
       <div className={isMenuOpen ? 'mobile-panel open' : 'mobile-panel'}>
-        <nav className="mobile-nav" aria-label={content.menu}>
-          {content.nav.map((item) => (
-            <a key={item.href} href={item.href} onClick={() => setIsMenuOpen(false)}>
-              {item.label}
-            </a>
-          ))}
-        </nav>
+        <button
+          className="mobile-overlay"
+          type="button"
+          aria-label={content.menu}
+          onClick={closeMobileMenu}
+        ></button>
+        <aside className="mobile-drawer" aria-label={content.menu}>
+          <div className="mobile-drawer-head">
+            <strong>{content.brand}</strong>
+            <button className="mobile-close" type="button" onClick={closeMobileMenu} aria-label={content.menu}>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+          <nav className="mobile-nav">
+            {content.nav.map((item) => (
+              <a key={item.href} href={item.href} onClick={closeMobileMenu}>
+                {item.label}
+              </a>
+            ))}
+          </nav>
+        </aside>
       </div>
 
       <section className="hero-section section-shell" id="top">
