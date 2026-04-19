@@ -368,6 +368,8 @@ function App() {
   const [activeCategory, setActiveCategory] = useState('all')
   const [activeTestimonial, setActiveTestimonial] = useState(0)
   const [formStatus, setFormStatus] = useState('')
+  const [isShowreelLoaded, setIsShowreelLoaded] = useState(false)
+  const [activeMediaVideo, setActiveMediaVideo] = useState(null)
   const touchStartX = useRef(0)
 
   const content = copy[language]
@@ -471,6 +473,14 @@ function App() {
 
   function closeMobileMenu() {
     setIsMenuOpen(false)
+  }
+
+  function loadShowreel() {
+    setIsShowreelLoaded(true)
+  }
+
+  function loadMediaVideo(projectTitle) {
+    setActiveMediaVideo(projectTitle)
   }
 
   return (
@@ -607,14 +617,34 @@ function App() {
 
         <div className="showreel-layout">
           <div className="featured-video-card">
-            <video
-              className="featured-video"
-              controls
-              preload="metadata"
-              poster="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1800&q=80"
-            >
-              <source src={showreelVideo} type="video/mp4" />
-            </video>
+            {isShowreelLoaded ? (
+              <video
+                className="featured-video"
+                controls
+                preload="metadata"
+                playsInline
+                poster="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1800&q=80"
+              >
+                <source src={showreelVideo} type="video/mp4" />
+              </video>
+            ) : (
+              <button
+                className="video-poster-button featured-video"
+                type="button"
+                onClick={loadShowreel}
+                aria-label={content.watch}
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1800&q=80"
+                  alt={content.showreelTitle}
+                  loading="eager"
+                  decoding="async"
+                />
+                <span className="poster-play-badge">
+                  <span></span>
+                </span>
+              </button>
+            )}
           </div>
 
           <div className="showreel-copy">
@@ -635,17 +665,28 @@ function App() {
           {mediaProjects.map((project) => (
             <article className="media-card" key={project.title.en}>
               <div className="media-thumb">
-                <video
-                  className="media-video"
-                  controls
-                  preload="metadata"
-                  poster={project.poster}
-                >
-                  <source src={project.video} type="video/mp4" />
-                </video>
-                <button className="play-button" type="button" aria-label={content.watch}>
-                  <span></span>
-                </button>
+                {activeMediaVideo === project.title.en ? (
+                  <video className="media-video" controls preload="metadata" playsInline poster={project.poster}>
+                    <source src={project.video} type="video/mp4" />
+                  </video>
+                ) : (
+                  <button
+                    className="video-poster-button media-video"
+                    type="button"
+                    onClick={() => loadMediaVideo(project.title.en)}
+                    aria-label={`${content.watch} ${project.title[language]}`}
+                  >
+                    <img
+                      src={project.poster}
+                      alt={project.title[language]}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span className="play-button" aria-hidden="true">
+                      <span></span>
+                    </span>
+                  </button>
+                )}
               </div>
               <div className="media-card-copy">
                 <strong>{project.title[language]}</strong>
