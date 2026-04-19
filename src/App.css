@@ -591,6 +591,10 @@
   gap: 0.8rem;
 }
 
+#portfolio .filter-row {
+  margin-bottom: 1.35rem;
+}
+
 .hero-caption {
   max-width: 38rem;
   color: var(--text-soft);
@@ -1231,6 +1235,10 @@
   .media-card-copy,
   .portfolio-copy {
     padding-top: 0.82rem;
+  }
+
+  #portfolio .filter-row {
+    margin-bottom: 1.05rem;
   }
 
   .play-button {
