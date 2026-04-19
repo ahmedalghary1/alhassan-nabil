@@ -40,6 +40,38 @@ const mediaProjects = [
   },
 ]
 
+const prestigeItems = [
+  { en: 'Brand Films', ar: 'أفلام العلامات' },
+  { en: 'Commercial Editing', ar: 'مونتاج إعلاني' },
+  { en: 'Music Visuals', ar: 'فيديوهات موسيقية' },
+  { en: 'Cinematic Trailers', ar: 'تريلرات سينمائية' },
+  { en: 'YouTube Story Cuts', ar: 'مونتاج قصصي لليوتيوب' },
+]
+
+const signaturePillars = [
+  {
+    title: { en: 'Story Before Speed', ar: 'القصة قبل السرعة' },
+    text: {
+      en: 'Every edit starts with a clear emotional objective, so the final film feels intentional, not assembled.',
+      ar: 'كل مونتاج يبدأ بهدف عاطفي واضح، حتى تبدو النتيجة النهائية مقصودة ومبنية بعناية لا مجرد تجميع لقطات.',
+    },
+  },
+  {
+    title: { en: 'Luxury Finish', ar: 'تشطيب فاخر' },
+    text: {
+      en: 'Color, sound, transitions, and pacing are polished to make the work feel premium from the very first second.',
+      ar: 'التلوين والصوت والانتقالات والإيقاع تُصقل بعناية ليشعر المشاهد بقيمة العمل من أول ثانية.',
+    },
+  },
+  {
+    title: { en: 'Retention Driven', ar: 'جاذبية واحتفاظ' },
+    text: {
+      en: 'The cut is built to hold attention, raise perceived value, and keep the audience emotionally invested.',
+      ar: 'المونتاج يُبنى ليشد الانتباه ويرفع قيمة المشروع في عين المشاهد ويحافظ على اندماجه حتى النهاية.',
+    },
+  },
+]
+
 const portfolioProjects = [
   {
     category: 'ads',
@@ -47,6 +79,10 @@ const portfolioProjects = [
     summary: {
       en: 'A luxury ad cut like a trailer, built around silence, texture, and desire.',
       ar: 'إعلان فاخر بُني بإيقاع تريلر سينمائي يعتمد على الصمت والملمس البصري وصناعة الترقب.',
+    },
+    result: {
+      en: 'Premium launch positioning',
+      ar: 'تموضع إطلاق فاخر',
     },
     image:
       'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1200&q=80',
@@ -58,6 +94,10 @@ const portfolioProjects = [
       en: 'Performance footage turned into a hypnotic visual rhythm with glitch accents.',
       ar: 'تحويل لقطات الأداء إلى إيقاع بصري منوّم مع لمسات جليتش محسوبة.',
     },
+    result: {
+      en: 'Memorable visual identity',
+      ar: 'هوية بصرية لا تُنسى',
+    },
     image:
       'https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1200&q=80',
   },
@@ -67,6 +107,10 @@ const portfolioProjects = [
     summary: {
       en: 'Long-form pacing designed to retain attention through emotional chaptering.',
       ar: 'إيقاع طويل المدى يحافظ على الانتباه عبر بناء عاطفي للفصول والمشاهد.',
+    },
+    result: {
+      en: 'Stronger watch retention',
+      ar: 'احتفاظ أعلى بالمشاهدة',
     },
     image:
       'https://images.unsplash.com/photo-1495567720989-cebdbdd97913?auto=format&fit=crop&w=1200&q=80',
@@ -78,6 +122,10 @@ const portfolioProjects = [
       en: 'A haunting trailer shaped to sell emotion before plot.',
       ar: 'تريلر يحمل أثرًا عاطفيًا عميقًا ويبيع الإحساس قبل أن يشرح الحبكة.',
     },
+    result: {
+      en: 'Cinematic emotional impact',
+      ar: 'أثر عاطفي سينمائي',
+    },
     image:
       'https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1200&q=80',
   },
@@ -87,6 +135,10 @@ const portfolioProjects = [
     summary: {
       en: 'Mechanical power translated into sharp cuts, restrained grade, and tension.',
       ar: 'ترجمة قوة الآلة إلى قطعات حادة، وتلوين متزن، وتوتر بصري مدروس.',
+    },
+    result: {
+      en: 'Sharper commercial impact',
+      ar: 'أثر إعلاني أقوى',
     },
     image:
       'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80',
@@ -98,6 +150,10 @@ const portfolioProjects = [
       en: 'Concert energy shaped into an intimate cinematic performance story.',
       ar: 'طاقة الحفل صيغت في سرد أدائي سينمائي حميم وقريب من المشاعر.',
     },
+    result: {
+      en: 'Stronger audience recall',
+      ar: 'تذكر أعلى لدى الجمهور',
+    },
     image:
       'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1200&q=80',
   },
@@ -108,6 +164,10 @@ const portfolioProjects = [
       en: 'Travel storytelling built with retention hooks, breathing room, and elevated polish.',
       ar: 'سرد رحلات يعتمد على نقاط جذب للمشاهدة ومساحات تنفس ولمسة إنهاء راقية.',
     },
+    result: {
+      en: 'Cleaner premium storytelling',
+      ar: 'سرد أنظف وأكثر فخامة',
+    },
     image:
       'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80',
   },
@@ -117,6 +177,10 @@ const portfolioProjects = [
     summary: {
       en: 'Typography, sound, and light leaks fused into a moody opening sequence.',
       ar: 'امتزاج الطباعة والصوت وتسربات الضوء في افتتاحية مزاجية ذات حضور قوي.',
+    },
+    result: {
+      en: 'High-end screen presence',
+      ar: 'حضور بصري رفيع',
     },
     image:
       'https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=1200&q=80',
@@ -191,24 +255,24 @@ const workflow = [
 const testimonials = [
   {
     quote: {
-      en: 'He made our campaign feel like a trailer people wanted to live inside.',
-      ar: 'حوّل حملتنا إلى تريلر يشعر الناس أنهم يريدون العيش داخله.',
+      en: 'He turned a polished campaign into a premium film. The brand suddenly felt bigger, sharper, and far more expensive.',
+      ar: 'حوّل حملة جيدة إلى فيلم فاخر بحق. فجأة بدت العلامة أكبر وأكثر حدة وذات قيمة أعلى بكثير.',
     },
-    author: { en: 'Creative Director, Maison Orphic', ar: 'المدير الإبداعي، ميزون أورفيك' },
+    author: { en: 'Creative Director, Maison Orphic', ar: 'المدير الإبداعي - ميزون أورفيك' },
   },
   {
     quote: {
-      en: 'We hired an editor. What we got was a storyteller with studio-level control.',
-      ar: 'ظننّا أننا نتعاقد مع محرر، لكننا حصلنا على حكّاء يمتلك تحكمًا بمستوى الاستوديوهات.',
+      en: 'We expected an editor. What we got was someone who understood positioning, emotion, and how to make people keep watching.',
+      ar: 'كنا نبحث عن محرر، لكننا وجدنا شخصًا يفهم التموضع والعاطفة وكيف يجعل المشاهد يكمل حتى النهاية.',
     },
-    author: { en: 'Founder, Northline Media', ar: 'المؤسس، نورثلاين ميديا' },
+    author: { en: 'Founder, Northline Media', ar: 'المؤسس - نورثلاين ميديا' },
   },
   {
     quote: {
-      en: 'Every cut had intent. Every pause had weight. The final film felt expensive.',
-      ar: 'كل قطْعة كانت مقصودة، وكل صمت كان له وزن، والنتيجة بدت فاخرة بحق.',
+      en: 'Every cut felt intentional. Every pause had authority. The final piece looked and sounded like a studio-level release.',
+      ar: 'كل قطْعة كانت مقصودة، وكل صمت كان له هيبة، والنسخة النهائية بدت كإصدار على مستوى الاستوديوهات.',
     },
-    author: { en: 'Producer, Ember', ar: 'المنتج، إمبر' },
+    author: { en: 'Producer, Ember', ar: 'المنتج - إمبر' },
   },
 ]
 
@@ -225,59 +289,63 @@ const copy = {
     ],
     menu: 'Menu',
     languageLabel: 'Language',
-    heroEyebrow: 'Premium Video Editor / Ads, Music Videos, Brand Films',
-    heroTitle: 'I don’t edit videos. I craft stories.',
+    heroEyebrow: 'High-End Video Editor / Campaign Films, Music Visuals, Premium Post',
+    heroTitle: 'I don’t cut footage. I build films people remember.',
     heroCopy:
-      'I turn raw footage into premium films that hold attention, raise perceived value, and make brands feel unforgettable. Every cut is built to sell emotion before it sells the message.',
-    watch: 'Watch Showreel',
-    hire: 'Book Your Project',
+      'I help brands, artists, and ambitious creators look more premium on screen. From the first frame to the final sound hit, every detail is shaped to elevate perception, sharpen emotion, and make the work impossible to ignore.',
+    watch: 'Watch The Reel',
+    hire: 'Start A Premium Project',
     portraitBadge: 'Creative Editor Portrait',
+    heroCaption: 'Editorial direction, cinematic finishing, and brand-led storytelling.',
     heroStats: [
-      { value: '120+', label: 'projects shaped for brands, artists, and premium digital campaigns' },
-      { value: '9 yrs', label: 'of story-first editing, sound shaping, and cinematic finishing' },
-      { value: '4 formats', label: 'delivery across social, vertical, web, and master campaign cuts' },
+      { value: '120+', label: 'premium edits delivered across campaigns, launches, music, and digital storytelling' },
+      { value: '9 yrs', label: 'of shaping narrative rhythm, emotional tone, and refined post-production finish' },
+      { value: '4 formats', label: 'campaign masters prepared for social, vertical, widescreen, and long-form delivery' },
     ],
+    pillarsEyebrow: 'Why Clients Choose This Style',
+    pillarsTitle: 'Creative precision that makes the work look expensive, strategic, and unforgettable.',
     showreelEyebrow: 'Featured Showreel',
-    showreelTitle: 'Selected edits built to stop the scroll and instantly elevate the brand.',
+    showreelTitle: 'A showreel designed to communicate taste, control, and screen presence in seconds.',
     showreelCopy:
-      'From launch films to music visuals and creator documentaries, every edit is shaped for retention, emotion, and a polished cinematic finish clients can feel from the first seconds.',
-    showreelPoints: ['Premium pacing', 'Luxury-grade color and sound', 'Cuts designed for retention'],
-    reelGridTitle: 'Video previews',
+      'These edits are not assembled for volume. They are built for impact. Each piece is shaped to control tempo, hold attention, and give the client a sharper, more premium visual identity.',
+    showreelPoints: ['Controlled pacing with tension', 'Color and sound polished for premium perception', 'Cinematic finishing that increases audience trust'],
+    reelGridTitle: 'Selected motion previews',
     portfolioEyebrow: 'Portfolio',
     portfolioTitle:
-      'Projects crafted to make products, people, and stories feel premium from the first second.',
-    portfolioCta: 'Open Project',
+      'Projects engineered to raise perceived value, sharpen the message, and make every frame work harder.',
+    portfolioCta: 'View Project',
     aboutEyebrow: 'About',
-    aboutTitle: 'I edit to make people feel, remember, and take action.',
+    aboutTitle: 'The goal is simple: make the audience feel the difference immediately.',
     aboutBody: [
-      'The strongest edits do more than look good. They create trust, raise value, and pull the viewer deeper into the story without wasting a second.',
-      'That is how I approach every project. Whether it is a luxury ad, a music video, or a YouTube documentary, the edit is built to feel expensive, emotionally precise, and impossible to ignore.',
+      'Strong editing is not decoration. It is positioning. It tells the audience how seriously they should take the brand, the artist, or the story in front of them.',
+      'That is why I treat editing as a strategic layer of filmmaking, not only a technical stage. Every decision in timing, texture, sound, and contrast exists to make the final piece feel elevated, cohesive, and commercially powerful.',
     ],
     skillsEyebrow: 'Skills',
-    skillsTitle: 'A premium post-production toolkit, guided by taste and strategy.',
+    skillsTitle: 'A premium post-production stack, led by taste, restraint, and sharp editorial judgment.',
     workflowEyebrow: 'Workflow',
-    workflowTitle: 'A clear process that moves fast without losing cinematic quality.',
+    workflowTitle: 'A disciplined process that protects quality while moving with commercial speed.',
     testimonialsEyebrow: 'Testimonials',
-    testimonialsTitle: 'What clients say after the cut lands and the results start showing.',
+    testimonialsTitle: 'What collaborators say when the final cut does more than just look good.',
     contactEyebrow: 'Contact',
-    contactTitle: 'Need a film that looks premium and sells the idea fast?',
+    contactTitle: 'Need a film that feels premium the second it starts?',
     contactCopy:
-      'Send the brief, the audience, and the goal. I will shape an edit that feels cinematic, builds trust quickly, and helps the project make a strong first impression.',
+      'If the project matters, the edit should carry authority. Share the brief, the audience, and the objective, and I will shape a version that feels cinematic, controlled, and commercially persuasive.',
     form: {
       name: 'Name',
       email: 'Email',
       project: 'Project Type',
       message: 'Brief',
-      submit: 'Start The Conversation',
+      submit: 'Send Project Brief',
       placeholders: {
         name: 'Your name',
         email: 'you@example.com',
-        project: 'Trailer, ad, documentary, YouTube series...',
-        message: 'Tell me about the story, the footage, the tone, and the delivery goals.',
+        project: 'Campaign film, launch ad, music video, creator documentary...',
+        message: 'Tell me what the audience should feel, what footage exists, and what the edit needs to achieve commercially.',
       },
       success:
-        'Your brief is in. I will come back with a sharp creative direction, pacing approach, and delivery plan.',
+        'The brief is received. I will return with a strong creative direction, editorial approach, and a delivery path that fits the project properly.',
     },
+    footer: 'Premium editorial crafted for brands, artists, and stories that need real screen presence.',
   },
   ar: {
     dir: 'rtl',
@@ -291,58 +359,62 @@ const copy = {
     ],
     menu: 'القائمة',
     languageLabel: 'اللغة',
-    heroEyebrow: 'محرر فيديو احترافي / إعلانات، فيديوهات موسيقية، أفلام علامات تجارية',
-    heroTitle: 'أنا لا أحرر الفيديوهات، بل أصنع قصصًا.',
+    heroEyebrow: 'محرر فيديو رفيع المستوى / أفلام حملات، فيديوهات موسيقية، تشطيب سينمائي فاخر',
+    heroTitle: 'أنا لا أرتب اللقطات فقط، بل أبني أفلامًا تترك أثرًا.',
     heroCopy:
-      'أحوّل اللقطات الخام إلى أفلام تبدو فاخرة، تشد الانتباه سريعًا، وترفع قيمة العلامة في عين المشاهد. كل قطْعة مصممة لتبيع الإحساس قبل أن تشرح الرسالة.',
-    watch: 'شاهد الأعمال',
-    hire: 'احجز مشروعك',
+      'أساعد العلامات التجارية والفنانين وصناع المحتوى الطموحين على الظهور بصورة أرفع وأكثر تأثيرًا على الشاشة. من أول كادر إلى آخر ضربة صوت، كل تفصيلة تُبنى لرفع القيمة، وشحذ الإحساس، وجعل العمل صعب التجاهل.',
+    watch: 'شاهد الريل',
+    hire: 'ابدأ مشروعًا فاخرًا',
     portraitBadge: 'بورتريه احترافي للمحرر',
+    heroCaption: 'رؤية تحريرية، تشطيب سينمائي، وسرد يخدم قيمة البراند.',
     heroStats: [
-      { value: '+120', label: 'مشروعًا للعلامات التجارية والفنانين والحملات الرقمية الراقية' },
-      { value: '9 سنوات', label: 'من المونتاج المبني على القصة والصوت والتشطيب السينمائي' },
-      { value: '4 صيغ', label: 'تسليم للسوشيال والعمودي والويب ونسخ الحملات الرئيسية' },
+      { value: '+120', label: 'مونتاجًا احترافيًا للحملات والإطلاقات والأغاني والسرد الرقمي الرفيع' },
+      { value: '9 سنوات', label: 'من صناعة الإيقاع السردي والنبرة العاطفية والتشطيب البصري والصوتي' },
+      { value: '4 صيغ', label: 'نسخ جاهزة للسوشيال والعمودي والعريض والمحتوى الطويل باحتراف كامل' },
     ],
+    pillarsEyebrow: 'لماذا يختار العملاء هذا المستوى',
+    pillarsTitle: 'دقة إبداعية تجعل العمل يبدو أغلى، أذكى، وأكثر حضورًا من أول ثانية.',
     showreelEyebrow: 'الأعمال المختارة',
-    showreelTitle: 'أعمال مختارة صُممت لتوقف التمرير وترفع قيمة المشروع من أول ثانية.',
+    showreelTitle: 'ريل صُمم ليُظهر الذوق، والتحكم، والحضور البصري خلال ثوانٍ قليلة.',
     showreelCopy:
-      'من أفلام الإطلاق إلى الفيديوهات الموسيقية والوثائقيات الرقمية، كل مونتاج هنا مبني على جذب الانتباه، وصناعة الإحساس، وإنهاء بصري وصوتي يشعر العميل بقيمته فورًا.',
-    showreelPoints: ['إيقاع فاخر', 'تلوين وصوت بمستوى احترافي', 'مونتاج يخدم الاحتفاظ بالمشاهد'],
-    reelGridTitle: 'معاينات فيديو',
+      'هذه الأعمال لم تُجمع لمجرد العرض، بل صُممت لتصنع أثرًا واضحًا. كل قطعة هنا مبنية للتحكم في الإيقاع، وشد الانتباه، ومنح العميل هوية بصرية أكثر رقيًا وقوة.',
+    showreelPoints: ['إيقاع مضبوط يصنع التوتر', 'تلوين وصوت يرفعان الإحساس بالقيمة', 'تشطيب سينمائي يعزز ثقة المشاهد'],
+    reelGridTitle: 'معاينات حركية مختارة',
     portfolioEyebrow: 'المعرض',
-    portfolioTitle: 'مشاريع صُممت لتجعل المنتج والشخص والقصة يبدون أكثر قيمة من أول لحظة.',
-    portfolioCta: 'فتح المشروع',
+    portfolioTitle: 'مشاريع صُممت لرفع القيمة الظاهرة، وشحذ الرسالة، وجعل كل كادر يعمل لصالح المشروع.',
+    portfolioCta: 'عرض المشروع',
     aboutEyebrow: 'نبذة',
-    aboutTitle: 'أمنتج ليشعر الناس، ويتذكروا، ويتخذوا خطوة.',
+    aboutTitle: 'الهدف واضح: أن يشعر المشاهد بفرق المستوى فورًا.',
     aboutBody: [
-      'أفضل المونتاجات ليست فقط جميلة بصريًا، بل تجعل المشاهد يثق أكثر، ويتفاعل أسرع، ويشعر أن المشروع أمامه أعلى قيمة من المعتاد.',
-      'لهذا أتعامل مع كل مشروع كتصميم سردي كامل. سواء كان إعلانًا فاخرًا أو فيديو موسيقيًا أو وثائقيًا رقميًا، فالهدف أن يبدو العمل قويًا، أنيقًا، ومغريًا للمشاهدة حتى النهاية.',
+      'المونتاج القوي ليس مجرد شكل جميل، بل هو تموضع. هو ما يخبر المشاهد بشكل غير مباشر أن هذا البراند أو هذا الفنان أو هذه القصة تستحق الانتباه والثقة.',
+      'لهذا أتعامل مع المونتاج كطبقة استراتيجية من صناعة الفيلم، لا كمرحلة تقنية فقط. التوقيت، والملمس، والصوت، والتباين، كلها قرارات موجودة لتجعل النتيجة النهائية أرفع، وأشد تماسكًا، وأكثر تأثيرًا تجاريًا.',
     ],
     skillsEyebrow: 'المهارات',
-    skillsTitle: 'عدة ما بعد الإنتاج الاحترافية، لكن القرار دائمًا للذوق والاستراتيجية.',
+    skillsTitle: 'عدة ما بعد إنتاج قوية، لكن الفارق الحقيقي في الذوق والانضباط التحريري.',
     workflowEyebrow: 'آلية العمل',
-    workflowTitle: 'خطوات واضحة وسريعة تحافظ على الجودة السينمائية من البداية للنهاية.',
+    workflowTitle: 'منهج منضبط يحافظ على الجودة العالية مع سرعة تناسب المشاريع التجارية.',
     testimonialsEyebrow: 'آراء العملاء',
-    testimonialsTitle: 'ما يقوله العملاء بعد نزول النسخة وظهور الأثر الحقيقي.',
+    testimonialsTitle: 'ما يقوله المتعاونون حين تتجاوز النسخة النهائية فكرة أنها جميلة فقط.',
     contactEyebrow: 'تواصل',
-    contactTitle: 'هل تريد فيديو يبدو فاخرًا ويبيع الفكرة بسرعة؟',
+    contactTitle: 'هل تريد فيلمًا يشعر المشاهد بفخامته منذ اللحظة الأولى؟',
     contactCopy:
-      'أرسل فكرة المشروع، والجمهور المستهدف، والنتيجة التي تريد الوصول إليها، وسأبني لك معالجة تحريرية تجعل العمل أكثر جاذبية وقيمة وتأثيرًا.',
+      'إذا كان المشروع مهمًا، فيجب أن يحمل المونتاج هيبة واضحة. أرسل الفكرة والجمهور والهدف، وسأبني لك نسخة تبدو سينمائية، متزنة، ومقنعة تجاريًا من أول مشاهدة.',
     form: {
       name: 'الاسم',
       email: 'البريد الإلكتروني',
       project: 'نوع المشروع',
       message: 'النبذة',
-      submit: 'ابدأ المحادثة',
+      submit: 'أرسل تفاصيل المشروع',
       placeholders: {
         name: 'اسمك',
         email: 'you@example.com',
-        project: 'تريلر، إعلان، وثائقي، سلسلة يوتيوب...',
-        message: 'احكِ لي عن القصة، واللقطات، والنبرة، وأهداف التسليم.',
+        project: 'فيلم حملة، إعلان إطلاق، فيديو موسيقي، وثائقي رقمي...',
+        message: 'احكِ لي ما الذي يجب أن يشعر به المشاهد، وما اللقطات المتاحة، وما الهدف التجاري الذي يجب أن يحققه المونتاج.',
       },
       success:
-        'وصلني طلبك. سأعود إليك برؤية إبداعية واضحة، وإيقاع مناسب، وخطة تنفيذ احترافية.',
+        'وصلت تفاصيل المشروع. سأعود إليك برؤية إبداعية قوية، ونهج تحريري واضح، ومسار تنفيذ مناسب لطبيعة العمل.',
     },
+    footer: 'مونتاج فاخر صُمم للعلامات التجارية والفنانين والقصص التي تحتاج حضورًا بصريًا حقيقيًا.',
   },
 }
 
@@ -527,12 +599,18 @@ function App() {
                 {content.hire}
               </a>
             </div>
+            <p className="hero-caption">{content.heroCaption}</p>
             <div className="hero-stats">
               {content.heroStats.map((stat) => (
                 <article className="stat-card" key={stat.label}>
                   <strong>{stat.value}</strong>
                   <span>{stat.label}</span>
                 </article>
+              ))}
+            </div>
+            <div className="prestige-strip" aria-label="Capabilities">
+              {prestigeItems.map((item) => (
+                <span key={item.en}>{item[language]}</span>
               ))}
             </div>
           </div>
@@ -544,6 +622,22 @@ function App() {
             </div>
             <span className="portrait-badge">{content.portraitBadge}</span>
           </div>
+        </div>
+      </section>
+
+      <section className="section-shell content-section signature-section">
+        <div className="section-head">
+          <p className="eyebrow">{content.pillarsEyebrow}</p>
+          <h2>{content.pillarsTitle}</h2>
+        </div>
+
+        <div className="signature-grid">
+          {signaturePillars.map((pillar) => (
+            <article className="signature-card" key={pillar.title.en}>
+              <span className="meta-line">{pillar.title[language]}</span>
+              <p>{pillar.text[language]}</p>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -639,6 +733,7 @@ function App() {
                 </span>
                 <h3>{project.title[language]}</h3>
                 <p>{project.summary[language]}</p>
+                <span className="result-pill">{project.result[language]}</span>
                 <button className="text-link" type="button">
                   {content.portfolioCta}
                 </button>
@@ -806,6 +901,11 @@ function App() {
           </form>
         </div>
       </section>
+
+      <footer className="section-shell site-footer">
+        <strong>{content.brand}</strong>
+        <p>{content.footer}</p>
+      </footer>
     </main>
   )
 }
