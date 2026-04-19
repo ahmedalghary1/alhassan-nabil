@@ -409,7 +409,6 @@
 .featured-video-card,
 .media-card,
 .portfolio-card,
-.signature-card,
 .skill-card,
 .timeline-card,
 .testimonial-card,
@@ -436,44 +435,6 @@
 .stat-card strong {
   color: var(--text-strong);
   font-size: 1.45rem;
-}
-
-.prestige-strip {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem;
-  margin-top: 0.35rem;
-}
-
-.prestige-strip span,
-.result-pill {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 2.2rem;
-  padding: 0.45rem 0.85rem;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--text-soft);
-  font-size: 0.84rem;
-}
-
-.signature-grid {
-  display: grid;
-  gap: 1rem;
-}
-
-.signature-card {
-  display: grid;
-  gap: 0.9rem;
-  padding: 1.35rem;
-}
-
-.signature-card p {
-  margin: 0;
-  color: var(--text-muted);
-  line-height: 1.95;
 }
 
 .hero-portrait {
@@ -1001,10 +962,6 @@
   .skills-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
-  .signature-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
 }
 
 @media (max-width: 639px) {
@@ -1068,16 +1025,6 @@
   .media-card-copy,
   .portfolio-copy {
     padding-top: 0.95rem;
-  }
-
-  .prestige-strip {
-    gap: 0.5rem;
-  }
-
-  .prestige-strip span,
-  .result-pill {
-    width: 100%;
-    justify-content: center;
   }
 }
 
