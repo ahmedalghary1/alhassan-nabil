@@ -1,0 +1,41 @@
+<svg width="1200" height="1400" viewBox="0 0 1200 1400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="1400" fill="#090B12"/>
+  <rect width="1200" height="1400" fill="url(#bg)"/>
+  <circle cx="914" cy="246" r="210" fill="url(#lightBlue)" fill-opacity="0.8"/>
+  <circle cx="266" cy="318" r="246" fill="url(#lightAmber)" fill-opacity="0.85"/>
+  <circle cx="610" cy="602" r="226" fill="#111723"/>
+  <path d="M424 1227C448 1013.26 502.77 848.787 605.5 848.5C708.23 848.213 760 1013.26 785 1227H424Z" fill="#101520"/>
+  <path d="M460 602C460 511.425 533.425 438 624 438C714.575 438 788 511.425 788 602V687C788 777.575 714.575 851 624 851C533.425 851 460 777.575 460 687V602Z" fill="url(#face)"/>
+  <path d="M513 600C536 532 585 491 653 491C724 491 770 539 782 612C794 540 764 401 623 401C505 401 455 497 513 600Z" fill="#171D2A"/>
+  <path d="M492 759C555 798 682 805 753 753C745 833 693 891 624 891C558 891 510 838 492 759Z" fill="#D2A27A"/>
+  <path d="M452 1205C488 978 522 905 624 905C726 905 769 978 796 1205H452Z" fill="#161B27"/>
+  <path d="M416 1249H832C881 1249 921 1289 921 1338V1400H327V1338C327 1289 367 1249 416 1249Z" fill="#0E131E"/>
+  <rect x="317" y="176" width="566" height="1016" rx="283" stroke="rgba(255,255,255,0.08)" stroke-width="2"/>
+  <rect x="0" y="0" width="1200" height="1400" fill="url(#grain)" fill-opacity="0.25"/>
+  <defs>
+    <radialGradient id="bg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(600 540) rotate(90) scale(860 760)">
+      <stop offset="0" stop-color="#121827"/>
+      <stop offset="1" stop-color="#05070D"/>
+    </radialGradient>
+    <radialGradient id="lightAmber" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(266 318) rotate(90) scale(246)">
+      <stop stop-color="#DCA667"/>
+      <stop offset="1" stop-color="#DCA667" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lightBlue" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(914 246) rotate(90) scale(210)">
+      <stop stop-color="#547EFF"/>
+      <stop offset="1" stop-color="#547EFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="face" x1="624" y1="438" x2="624" y2="851" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E4B48C"/>
+      <stop offset="1" stop-color="#B98661"/>
+    </linearGradient>
+    <pattern id="grain" width="120" height="120" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="14" r="1.1" fill="#FFFFFF" fill-opacity="0.2"/>
+      <circle cx="31" cy="48" r="1.2" fill="#FFFFFF" fill-opacity="0.12"/>
+      <circle cx="77" cy="32" r="1.1" fill="#FFFFFF" fill-opacity="0.18"/>
+      <circle cx="92" cy="88" r="1.3" fill="#FFFFFF" fill-opacity="0.12"/>
+      <circle cx="48" cy="94" r="1" fill="#FFFFFF" fill-opacity="0.16"/>
+      <circle cx="110" cy="16" r="1" fill="#FFFFFF" fill-opacity="0.1"/>
+    </pattern>
+  </defs>
+</svg>

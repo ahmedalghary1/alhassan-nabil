@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  color-scheme: dark;
+  --bg: #04060c;
+  --text-strong: #f3f0e8;
+  --text-muted: rgba(243, 240, 232, 0.78);
+  --text-soft: rgba(243, 240, 232, 0.52);
+  --border: rgba(255, 255, 255, 0.09);
+  --border-strong: rgba(255, 255, 255, 0.18);
+  --accent: #dca667;
+  --shadow-soft: 0 1.5rem 3rem rgba(0, 0, 0, 0.25);
+  --page-dark: #090b12;
+  --font-sans: 'Sora', sans-serif;
+  --font-display: 'Sora', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: var(--font-sans);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+html[dir='rtl'] {
+  --font-sans: 'IBM Plex Sans Arabic', sans-serif;
+  --font-display: 'IBM Plex Sans Arabic', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background:
+    radial-gradient(circle at top, rgba(215, 137, 67, 0.12), transparent 28%),
+    radial-gradient(circle at 85% 15%, rgba(58, 92, 191, 0.12), transparent 18%),
+    var(--bg);
+}
+
+body {
+  margin: 0;
+  color: var(--text-muted);
+  background: transparent;
+  font-family: var(--font-sans);
+  line-height: 1.85;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.015), transparent 12%),
+    radial-gradient(circle at 20% 0%, rgba(220, 166, 103, 0.12), transparent 26%);
+  z-index: -1;
+}
+
+a,
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+strong {
+  color: var(--text-strong);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.18;
+}
+
+p {
+  margin: 0;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+html[dir='rtl'] body {
+  line-height: 2;
+}
+
+html[dir='rtl'] h1,
+html[dir='rtl'] h2,
+html[dir='rtl'] h3 {
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+
+::selection {
+  background: rgba(220, 166, 103, 0.35);
+  color: var(--text-strong);
+}
